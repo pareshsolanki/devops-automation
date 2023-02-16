@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools{
-        maven 'maven_3_5_0'
+        maven 'maven_3_9_0'
     }
     stages{
         stage('Build Maven'){
@@ -28,6 +28,7 @@ pipeline {
                 }
             }
         }
+       /*
         stage('Deploy to k8s'){
             steps{
                 script{
@@ -35,5 +36,6 @@ pipeline {
                 }
             }
         }
+        */
     }
 }
